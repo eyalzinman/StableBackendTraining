@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Algorithms/Algorithms.csproj" />
+  <Project Path="Banking.Api/Banking.Api.csproj" />
+  <Project Path="Banking.Application/Banking.Application.csproj" />
+  <Project Path="Banking.Infrastructure/Banking.Infrastructure.csproj" />
+</Solution>
