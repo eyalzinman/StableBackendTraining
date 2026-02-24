@@ -3,4 +3,5 @@
   <Project Path="Banking.Api/Banking.Api.csproj" />
   <Project Path="Banking.Application/Banking.Application.csproj" />
   <Project Path="Banking.Infrastructure/Banking.Infrastructure.csproj" />
+  <Project Path="LearningC#/LearningC#.csproj" Id="c2ee50d5-7e8e-4fbb-ae3d-5c764972d06b" />
 </Solution>
