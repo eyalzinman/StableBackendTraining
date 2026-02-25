@@ -1,4 +1,5 @@
-﻿namespace LearningC_
+﻿using System;
+namespace LearningC_
 {
     class A { public int X; }
     class Person
@@ -19,6 +20,8 @@
            return value;
         }
 
+        public void Dispose() { }
+
         public string this[int index]
         {
             get { return _players[index]; }
@@ -28,7 +31,19 @@
     }
     public class Class1
     {
-        static void Main()
+        static void Main(string[] args)
+        {
+            var orderLogger = new Logger<Order>();
+            orderLogger.Log(new Order { OrderId = 123 });
+
+            var customerLogger = new Logger<Customer>();
+            customerLogger.Log(new Customer { Name = "Eyal" });
+
+            var productLogger = new Logger<Product>();
+            productLogger.Log(new Product { Name = "Zinman" });
+        }
+
+        static void Main_()
         {
             int? age = null;
 

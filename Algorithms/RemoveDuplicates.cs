@@ -53,25 +53,42 @@ namespace Algorithms
             //i is the current element index
             //Input: nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
             int j = 0;
-            int duplicateCounter = 0;
+            int lastNumber = nums[0];
 
             for (int i = 1; i < nums.Length; i++)
             {
-                if (nums[i - 1] != nums[i])
+                if (lastNumber != nums[i])
                 {
-                    if (duplicateCounter > 0)
-                    {
-                        ++j;
-                        nums[j] = nums[i];
-                        duplicateCounter = 0;
-                    }
-                }
-                else
-                {
-                    ++duplicateCounter;
+                    ++j;
+                    nums[j] = nums[i];
+                    lastNumber = nums[i];
                 }
             }
+
+            //Just for clean view
+            for(int i = j+1; i < nums.Length; i++)
+                nums[i] = -1000;
+            
             return j+1;
+        }
+
+        public int Execute_ChatGPT(int[] nums)
+        {
+            if (nums.Length == 0)
+                return 0;
+
+            int j = 0;
+
+            for (int i = 1; i < nums.Length; i++)
+            {
+                if (nums[i] != nums[j])
+                {
+                    j++;
+                    nums[j] = nums[i];
+                }
+            }
+
+            return j + 1;
         }
     }
 }

@@ -47,6 +47,17 @@
             int[] nums6 = { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
             Console.WriteLine(duplicate.Execute(nums5));
             Console.WriteLine(duplicate.Execute(nums6));
+
+            int[] nums7 = { 2, 2, 2, 0, 1, 2, 2, 3, 0, 4, 2 };
+            RomoveElements remove = new RomoveElements();
+            Console.WriteLine(remove.Execute_GPT(nums7,2));
+
+            int[] nums8 = { 9,9,9,9,9 };
+            SearchInsert insert = new SearchInsert();
+            Console.WriteLine(insert.Execute(nums8, 7));
+
+            PlusOne po = new PlusOne();
+            Console.WriteLine(po.Execute(nums8));
         }
 
     }
